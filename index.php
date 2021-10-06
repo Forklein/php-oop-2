@@ -24,9 +24,9 @@ require_once __DIR__ . '/models/Premium.php';
             <h1><?= $premium->getDiscount() ?></h1>
             <?php
             try {
-                echo $premium->setCreditCard(5050);
+                echo $premium->setCreditCard(50505050);
             } catch (Exception $e) {
-                echo 'Carta di credito invalida';
+                echo $e->getMessage();
             }
             ?>
         </section>

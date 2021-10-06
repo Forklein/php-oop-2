@@ -23,7 +23,7 @@ class User
     public function setCreditCard($card)
     {
         if (!is_numeric($card)) {
-            throw new Exception('Invalid card number');
+            throw new Exception('Non puoi inserire una stringa');
         } else if (strlen($card) !== 16) {
             throw new Exception('La carta deve avere 16 cifre');
         } else {
