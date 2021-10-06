@@ -13,6 +13,7 @@ class User
         $this->email = $email;
     }
 
+    //Getter
     public function getFullName()
     {
         return $this->name . ' ' . $this->lastName;
