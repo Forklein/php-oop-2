@@ -22,6 +22,13 @@ require_once __DIR__ . '/models/Premium.php';
             <h1><?= $user->getFullName() ?></h1>
             <? $premium = new Premium('Giuseppe', 'Pisani', 'test@libero.it') ?>
             <h1><?= $premium->getDiscount() ?></h1>
+            <?php
+            try {
+                echo $premium->setCreditCard(5050);
+            } catch (Exception $e) {
+                echo 'Carta di credito invalida';
+            }
+            ?>
         </section>
     </main>
 </body>
